@@ -26,8 +26,9 @@ class mmr:
 			
 
 			await self.bot.say("Steam ID is " + steamID)
-			await self.bot.say("Steam ID is " + disocordID)
+			await self.bot.say("Steam ID is " + discordID)
 			await self.bot.say("txt is" + txt)
+			
 			if ( (steamID in txt) or (discordID in txt) ):
 				await self.bot.say("Your discord / Steam ID was already registerd")
 			else:
