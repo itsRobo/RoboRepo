@@ -22,7 +22,7 @@ class dcog:
 		file.write( discord.member + "linksto" + id)
 		await self.bot.say("Success!")
 		#else:
-			await self.bot.say("Something went wrong!")
+		await self.bot.say("Something went wrong!")
 
 def setup(bot):
 	bot.add_cog(dcog(bot))
