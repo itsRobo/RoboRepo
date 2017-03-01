@@ -1,4 +1,5 @@
 import discord
+from discord.ext import commands
 #from discord.ext import commands
 
 class dcog:
@@ -19,5 +20,5 @@ class dcog:
 			file = open( "data/trivia/list.txt", a)
 			file.write( discord.member + "linksto" + id)
 
-	def setup(bot):
-		bot.add_cog(dcog(bot))
+def setup(bot):
+	bot.add_cog(dcog(bot))
