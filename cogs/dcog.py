@@ -9,7 +9,7 @@ class dcog:
 		self.bot = bot
 
 	@commands.command(pass_context=True)
-	async def linkmmr(self, ctx, message, id: discord.User.id):
+	async def linkmmr(self, ctx, message, discordid: discord.User.id):
 
 		triggerSubtext = "/id/" #this is the string directly before the id in the url
 		id = message
@@ -19,7 +19,7 @@ class dcog:
 
 		if os.path.isfile("data/mmr/mmr.txt"):
 			file = open( "data/mmr/mmr.txt", "a")
-			file.write( str(id) + "linksto " + str(id) )
+			file.write( str(discordid) + "linksto " + str(id) )
 			await self.bot.say("Success!")
 		else:
 			await self.bot.say("Something went wrong!")
