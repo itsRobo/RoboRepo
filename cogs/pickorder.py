@@ -24,7 +24,7 @@ class pickorder:
 		random.shuffle(id) #picks a random order for the names
 
 		for num2 in numbers: 
-			await self.bot.say( str(num2) + ". " + id[num])
+			await self.bot.say( str(num2) + ". " + id[num2-1])
 
 def setup(bot):
 	bot.add_cog(pickorder(bot))
