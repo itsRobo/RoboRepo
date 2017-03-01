@@ -17,14 +17,14 @@ class pickorder:
 		numbers=[];
 
 		for name in id: 
-			await self.bot.say(str(num) + ". " + name)
+			await self.bot.say( str(num) + ". " + name)
 			numbers.append(i)
 			num+=1
 
 		random.shuffle(id) #picks a random order for the names
 
 		for num in numbers: 
-			await self.bot.say(i + ". " + name)
+			await self.bot.say( str(num) + ". " + name)
 
 def setup(bot):
 	bot.add_cog(pickorder(bot))
