@@ -18,7 +18,7 @@ class pickorder:
 
 		for name in id: 
 			await self.bot.say( str(num) + ". " + name)
-			numbers.append(i)
+			numbers.append(num)
 			num+=1
 
 		random.shuffle(id) #picks a random order for the names
