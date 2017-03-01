@@ -11,11 +11,15 @@ class mmr:
 	@commands.command(pass_context=True)
 	async def linkmmr(self, ctx, steamID, user : discord.User):
 
-		triggerSubtext = "/id/" #this is the string directly before the id in the url
+		triggerSubtextOne = "/id/" #this is the string directly before the id in the url
+		triggerSubtextTwo = "/profiles/" #this is the string directly before the id in the url
 		discordID = user.id
 
 		if( "http://steamcommunity.com/id" in steamID ):
-			steamID = steamID[steamID.find(triggerSubtext)+len(triggerSubtext):]
+			steamID = steamID[steamID.find(triggerSubtextOne)+len(triggerSubtextOne):]
+
+		if http://steamcommunity.com/profiles/ in steamID
+			steamID = steamID[steamID.find(triggerSubtextTwo)+len(triggerSubtextTwo):]
 
 		if os.path.isfile("data/mmr/mmr.txt"):
 			file = open( "data/mmr/mmr.txt", "a")
