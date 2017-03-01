@@ -9,7 +9,7 @@ class dcog:
 		self.bot = bot
 
 	@commands.command(pass_context=True)
-	async def linkmmr(self, ctx, steamID, user):
+	async def linkmmr(self, ctx, steamID, user : discord.User):
 
 		triggerSubtext = "/id/" #this is the string directly before the id in the url
 		steamid = steamID
