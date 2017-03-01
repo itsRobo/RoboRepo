@@ -15,14 +15,14 @@ class pickorder:
 		i=1
 		numbers=[];
 
-		for name in id 
+		for name in id: 
 			await self.bot.say(i + ". " + name)
 			numbers.append(i)
 			i+=1
 
 		random.shuffle(id)
 
-		for num in numbers 
+		for num in numbers: 
 			await self.bot.say(i + ". " + name)
 			numbers.append(i)
 
