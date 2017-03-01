@@ -22,7 +22,7 @@ class mmr:
 			steamID = steamID[steamID.find(triggerSubtextTwo)+len(triggerSubtextTwo):]
 
 		if os.path.isfile("data/mmr/mmr.txt"):
-			txt = open( "data/mmr/mmr.txt")
+			txt = open( "data/mmr/mmr.txt", "r")
 			
 			if ( (steamID in txt) or (discordID in txt) ):
 				await self.bot.say("Your discord / Steam ID was already registerd")
