@@ -25,4 +25,4 @@ class mmr:
 			await self.bot.say("Something went wrong!")
 
 def setup(bot):
-	bot.add_cog(dcog(bot))
+	bot.add_cog(mmr(bot))
