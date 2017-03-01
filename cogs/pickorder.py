@@ -11,7 +11,7 @@ class pickorder:
 	@commands.command(pass_context=True)
 	async def pickorder(self, ctx, message):
  
-		id = message.split( )
+		id = ctx.message.context.split( )
 
 		num=1
 		numbers=[];
