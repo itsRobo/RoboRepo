@@ -20,6 +20,7 @@ class dcog:
 		if os.path.isfile("data/trivia/list.txt"):
 			file = open( "data/trivia/list.txt", a)
 			file.write( discord.member + "linksto" + id)
+			await self.bot.say("Success!")
 
 def setup(bot):
 	bot.add_cog(dcog(bot))
