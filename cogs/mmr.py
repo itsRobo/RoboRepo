@@ -24,7 +24,7 @@ class mmr:
 		if os.path.isfile("data/mmr/mmr.txt"):
 			txt = open( "data/mmr/mmr.txt")
 			
-			if ( (steamID in txt) or (userID in txt) ):
+			if ( (steamID in txt) or (discordID in txt) ):
 				await self.bot.say("Your discord / Steam ID was already registerd")
 			else:
 				file = open( "data/mmr/mmr.txt", "a")
