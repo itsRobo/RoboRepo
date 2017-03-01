@@ -18,7 +18,7 @@ class dcog:
 			steamID = steamID[steamID.find(triggerSubtext)+len(triggerSubtext):]
 
 		if os.path.isfile("data/mmr/mmr.txt"):
-			file = open( "data/mmr/mmr.txt", "a")
+			file = open( "data/mmr/mmr.txt", "a+")
 			file.write( str( discordID ) + "linksto " + str(steamID) + "\n")
 			await self.bot.say("Success!")
 		else:
