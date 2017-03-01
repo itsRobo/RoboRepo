@@ -13,19 +13,18 @@ class pickorder:
  
 		id = message.split( )
 
-		i=1
+		num=1
 		numbers=[];
 
 		for name in id: 
-			await self.bot.say(i + ". " + name)
+			await self.bot.say(str(num) + ". " + name)
 			numbers.append(i)
-			i+=1
+			num+=1
 
-		random.shuffle(id)
+		random.shuffle(id) #picks a random order for the names
 
 		for num in numbers: 
 			await self.bot.say(i + ". " + name)
-			numbers.append(i)
 
-	def setup(bot):
-		bot.add_cog(pickorder(bot))
+def setup(bot):
+	bot.add_cog(pickorder(bot))
