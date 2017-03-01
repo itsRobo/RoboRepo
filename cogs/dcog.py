@@ -9,17 +9,17 @@ class dcog:
 		self.bot = bot
 
 	@commands.command(pass_context=True)
-	async def linkmmr(self, ctx, message, User: discord.User.id):
+	async def linkmmr(self, ctx, steamID, user):
 
 		triggerSubtext = "/id/" #this is the string directly before the id in the url
-		id = message
+		steamid = steamID
 
 		if( "http://steamcommunity.com/id" in message ):
-			id = id[id.find(triggerSubtext)+len(triggerSubtext):]
+			steamid = steamid[id.find(triggerSubtext)+len(triggerSubtext):]
 
 		if os.path.isfile("data/mmr/mmr.txt"):
 			file = open( "data/mmr/mmr.txt", "a")
-			file.write( str(User) + "linksto " + str(id) )
+			file.write( str(user.id) + "linksto " + str(steamid) )
 			await self.bot.say("Success!")
 		else:
 			await self.bot.say("Something went wrong!")
