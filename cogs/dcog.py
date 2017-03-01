@@ -17,12 +17,12 @@ class dcog:
 		if( "http://steamcommunity.com/id" in message ):
 			id = id[id.find(triggerSubtext)+len(triggerSubtext):]
 
-		if os.path.isfile("data/trivia/list.txt"):
-			file = open( "data/trivia/list.txt", a)
-			file.write( discord.member + "linksto" + id)
-			await self.bot.say("Success!")
-		else:
-			await self.bot.say("Somthing went wrong!")
+		#if os.path.isfile("data/mmr/mmr.txt"):
+		file = open( "data/mmr/mmr.txt", a)
+		file.write( discord.member + "linksto" + id)
+		await self.bot.say("Success!")
+		#else:
+			await self.bot.say("Something went wrong!")
 
 def setup(bot):
 	bot.add_cog(dcog(bot))
