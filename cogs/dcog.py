@@ -21,7 +21,7 @@ class dcog:
 			file = open( "data/trivia/list.txt", a)
 			file.write( discord.member + "linksto" + id)
 			await self.bot.say("Success!")
-		elif
+		else:
 			await self.bot.say("Somthing went wrong!")
 
 def setup(bot):
