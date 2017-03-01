@@ -19,7 +19,7 @@ class dcog:
 
 		if os.path.isfile("data/mmr/mmr.txt"):
 			file = open( "data/mmr/mmr.txt", "a")
-			file.write( str(user.id) + "linksto " + str(steamid) )
+			file.write( str( user.id ) + "linksto " + str(steamid) )
 			await self.bot.say("Success!")
 		else:
 			await self.bot.say("Something went wrong!")
