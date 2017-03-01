@@ -14,8 +14,8 @@ class dcog:
 		triggerSubtext = "/id/" #this is the string directly before the id in the url
 		steamid = steamID
 
-		if( "http://steamcommunity.com/id" in message ):
-			steamid = steamid[id.find(triggerSubtext)+len(triggerSubtext):]
+		if( "http://steamcommunity.com/id" in steamID ):
+			steamid = steamid[steamid.find(triggerSubtext)+len(triggerSubtext):]
 
 		if os.path.isfile("data/mmr/mmr.txt"):
 			file = open( "data/mmr/mmr.txt", "a")
